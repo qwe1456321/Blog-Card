@@ -1,109 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 
-/* 設計稿都是固定字體 :
-優先搜索: Noto Sans TC 字體
-找到Google Fonts : 左上角的Fonts 裡面，第一行英文框 點入，右上角 有Get  font >> 引入的連結在 < > Get embed cold  
-進入後選 @import 
-引入的@import 外部資源，必須先放最上面。
-自己個人寫的樣式要寫在後面 */
-
-
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-*, *::before, *::after{  box-sizing: border-box;   /*幫自己計算好寬高*/
-                          /* outline:solid 1px;  */
-                     }
-                     /*>> 查看圖線排版功能(需隱藏) 要看再打開即可 */
-
-
-img{ vertical-align : middle; /*>> 把圖片下面空白去除*/
-     width:100% ;             /*>> 強制內縮在 div的空間裡。*/
-     height : auto ; 
-     display: block; /* 把圖片變成區塊元素，清楚底部空隙 */
-     object-fit: cover; /* 讓圖片填滿父層 */ }        /*>> 圖片還是必須寫一下，避免突發狀況。*/
-
-a{
-    display: inline-block;
-}
-/*>> ( 加了inline 佔據空間不會那麼多，原本a标签行內元素只能左右padding 不能上下padding ，所以需要 inline - block ) */
-
-body{
-    font-family: "Noto Sans TC", sans-serif;
-    line-height :  1.5;  /* = 150%; ( 意思一樣，但是{倍數}比%數更穩定 )*/
-  }
-/* sans-serif; = 通用字體，必須複製到，因為他是次順位字體 */
-
-.container-father{
-    max-width : 1920px;
-    margin : 0 auto ;
-}
-.container { 
-       max-width: 1320px; 
-       padding: 0px 12px;
-       margin: 0 auto; } 
-
-       /* 查看設計稿 : 
-1.Guideline 計算格線 
-2. (找出設計稿最寬元素)
-3. 注意 :  最外圍不須作1920px 滿版設定
-
-*~ 以上是此設計稿任務的通用套入設定 ~ *  */
-
-
-/* ************************************************************** */
 
 
 .serch {
     display: flex;
-    width: 416px;
+    width: 40%;
     height: 56px;
     border: 1px solid #4B4B4B;
     border-radius: 40px;
@@ -144,6 +44,9 @@ body{
 }
 
 @media (max-width:992px) {
+    .serch{
+        width: 100%;
+    }
     .container{
         padding: 0 15px; /*( 上+下 ) = 0px ( 左+右 ) = 15px* 左右留白 才好看*/
         
