@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+/* 設計稿都是固定字體 :
+優先搜索: Noto Sans TC 字體
+找到Google Fonts : 左上角的Fonts 裡面，第一行英文框 點入，右上角 有Get  font >> 引入的連結在 < > Get embed cold  
+進入後選 @import 
+引入的@import 外部資源，必須先放最上面。
+自己個人寫的樣式要寫在後面 */
+
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*, *::before, *::after{  box-sizing: border-box;   /*幫自己計算好寬高*/
+                          /* outline:solid 1px;  */
+                     }
+                     /*>> 查看圖線排版功能(需隱藏) 要看再打開即可 */
+
+
+img{ vertical-align : middle; /*>> 把圖片下面空白去除*/
+     width:100% ;             /*>> 強制內縮在 div的空間裡。*/
+     height : auto ; 
+     display: block; /* 把圖片變成區塊元素，清楚底部空隙 */
+     object-fit: cover; /* 讓圖片填滿父層 */ }        /*>> 圖片還是必須寫一下，避免突發狀況。*/
+
+a{
+    display: inline-block;
+}
+/*>> ( 加了inline 佔據空間不會那麼多，原本a标签行內元素只能左右padding 不能上下padding ，所以需要 inline - block ) */
+
+body{
+    font-family: "Noto Sans TC", sans-serif;
+    line-height :  1.5;  /* = 150%; ( 意思一樣，但是{倍數}比%數更穩定 )*/
+  }
+/* sans-serif; = 通用字體，必須複製到，因為他是次順位字體 */
+
+.container-father{
+    max-width : 1920px;
+    margin : 0 auto ;
+}
+/* .container { 
+       width: 100%;     
+       margin: 0 auto; }  */
+
+       /* 查看設計稿 : 
+1.Guideline 計算格線 
+2. (找出設計稿最寬元素)
+3. 注意 :  最外圍不須作1920px 滿版設定
+
+*~ 以上是此設計稿任務的通用套入設定 ~ *  */
+
+
+/* ****************************第三頁********************************** */
+
+:root {  
+    --color-h2-blue: #0027D5; 
+    --font-size-h2:28px;
+    --font-weight-h2:700;
+}  
+
+/* 套用公式:var(--color-backGroundPrimary); */
+
+/* 表頭 */
+.header-article {
+    display: flex;
+    justify-content: center;
+    
+}
+.header-article-li{
+    display: block;
+    margin: 24px 0px;
+}
+.article-a{
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000;
+    margin-left: 40px;
+    text-decoration: none;
+}
+.article-a:hover{
+    color: #ee33c9;
+}
+
+/* banner 區  */
+
+.header-banner{
+    display: flex;
+    border: 1px solid #6C757D;
+    width: 100%;
+}
+.header-bner-img{
+    width: 50%;
+}
+.header-bner-right{  /*  觸發 992 / 776 需要調整padding */ 
+    margin-left: 24px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+}
+.header-bner-right time{
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 4px;
+}
+.header-bner-right .bner-p-a{
+    font-size: 24px;
+    font-weight:500;
+    color: #0027D5;
+    margin-right: 8px;
+    text-decoration: none;
+    text-align: center;
+    
+}
+.header-bner-right  .bner-p-bnt{
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #0027D5;
+    padding: 6px 12px;
+    border-radius: 40px;
+    text-align: center;
+    
+}
+.header-bner-right  .bner-p-bnt:hover{
+    background-color: red;
+}
+.header-bner-right  .bner-h2{
+    font-weight: 700;
+    font-size: 28px;
+    color: #000000;
+    margin-top: 8px;
+}
+
+@media(max-width:992px){
+.header-bner-right{
+    margin-left: 0px;
+}
+
+.header-banner{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 0px 15px;
+    
+  }
+.header-bner-img{
+    width: 100%;
+    margin-right: 0px;
+  }
+.header-bner-right{  /*  觸發 992 / 776 需要調整padding */ 
+    padding: 24px 12px;
+    width: 100%;
+  }
+ 
+}
+
+
+/* ************* 中間內容區 **************************** */
+
+.content{
+    
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 0px 12px;
+}
+.content-font{
+    margin-top: 80px;
+    
+}
+.content-h2-blue{
+    color: var(--color-h2-blue);
+    font-weight: var(--font-weight-h2);
+    font-size: var(--font-size-h2);
+    margin-bottom: 24px;
+
+}
+
+.content-p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    
+}
+.content-font-li{
+    display: block;
+    margin-bottom: 48px;
+}
+
+
+@media(max-width:992px){
+    .content{
+    padding: 0px 15px 64px 15px ;
+    /* margin: 0 auto;
+    width: 100%; */
+}
+    .content-font{
+        width: 100%;
+    }
+
+
+}
+
+/* ********* 2. 打好基礎：HTML、CSS、JavaScript********* */
+
+
+
+.content-h3-bk{
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.ol-list{
+    padding-left: 22px;
+    
+}
+.ol-list-style1{
+    list-style: disc;
+    list-style-type:decimal;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    
+}
+
+.ol-list-style2{
+    list-style: disc;
+    list-style-type:decimal;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+}
+.content-p-leader{
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    margin-top: 8px;
+}
+.first-atc-img{
+    margin-bottom: 24px;
+}
+.first-atc-inside{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.text-bluecolor{
+    color: #0027D5;
+}
+
+.first-act-graybg{
+    background-color: #EDEDED;
+    border-radius: 24px;
+    padding: 24px;
+}
+.graybg-p{
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+}
+
+@media(max-width:992px){
+
+.first-article{
+    width: 100%;
+    margin: 0 auto;
+}
+
+}
+
+
+/* ********* 3. 擅用主流框架與工具 ********* */
+.ol-list-two{
+    list-style: disc;
+    list-style-type:disc;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+}
+
+
+/* ********* 5. 結語 ********* */
+
+.contract-a{
+    font-size: 16;
+    font-weight: 500;
+}
+
+.first-act-graybg-end{
+    background-color: #EDEDED;
+    border-radius: 24px;
+    padding: 24px;
+    margin: 24px 0px;
+}
+
+/* ********* 7.  翻頁  ********* */
+
+.flipPage{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4B4B4B;
+}
+
+.flipPage-left{
+    border: 1px solid #000000;
+    padding: 8px 16px;
+    border-radius: 40px;
+}
+.flipPage-left:hover{
+    background-color: #0027D5;
+    color: #FFFFFF;
+    border: 1px solid #0027D5;
+}
+
+.flipPage-left-ul{
+    display: flex;
+    align-items: center;
+}
+
+.flipPage-right-ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flipPage-right{
+    border: 1px solid #000000;
+    padding: 8px 16px;
+    border-radius: 40px;
+}
+.flipPage-right:hover{
+    background-color: #0027D5;
+    color: #FFFFFF;
+    border: 1px solid #0027D5;
+}
+.flipPage-side{
+    width: 24px;
+    height: 24px;
+
+}
+
+.flipPage-words{
+    width: 48px;
+    height: 24px;
+}
+.flipPage-side2{
+    width: 24px;
+    height: 24px;
+    padding-left: 8px;
+    /* border: 1px solid pink; */
+}
+
+
+
+/* 表尾 footer 製作 *********************************** */
+.footer{
+    margin: 0 auto;
+    width: 100%;
+}
+.footer .footer-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 312px;
+    width: 100%;
+}
+.footer .footer-top-Email{
+    
+    font-weight: 500;
+    font-size: 32px;
+    color: #000000;
+}
+
+.footer .footer-img-ul{
+    display: flex;
+    
+}
+.footer-under .footer-ud-year{
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    margin: 24px 0px;
+}
+@media (max-width:992px) {
+    
+    .footer .footer-top{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display:none;
+    }
+    /* .footer .footer-top-Email{
+       display:none; 
+    } */
+}
+@media (max-width:767px) {
+    .footer .footer-top{
+    width: 100%;
+   
+    padding-left: 200px;
+    padding-right: 200px;
+    
+
+    }
+    
+}
