@@ -231,16 +231,14 @@
     align-items: center;
 }
 .header .header-mid-img{
+    background-size: cover;
     display: flex;
     align-items: center;
     width: 50%;
     height: 831px;
     background:  url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true") no-repeat ;
 }
-.header .header-img-left{
-   
-    height: 831px;
-}
+
 .header .header-mid-l{
     width: 50%;
     
@@ -349,7 +347,7 @@
     }
     .header .header-mid-img{
         text-align: center;
-        width: 100%;
+        width: 50%;
         height: 180px;
 
     }
