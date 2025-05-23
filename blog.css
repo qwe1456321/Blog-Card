@@ -233,7 +233,7 @@
 .header .header-mid-img{
     width: 50%;
     height: 831px;
-    background:  url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true") ;
+    background:  url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true") no-repeat ;
 }
 .header .header-img-left{
     width: 100%;
@@ -413,14 +413,15 @@
 /* 表尾 footer 製作 *********************************** */
 .footer{
     /* margin: 0 auto; */
-    max-width: 1920px;
+    max-width: 1320px;
+    padding: 12px;
+    margin: 0 auto;
     width: 100%;
 }
 .footer .footer-top{
     display: flex;
     justify-content: space-between;
-    padding: 80px 312px;
-    
+    padding: 80px  0px;
     width: 100%;
 }
 .footer .footer-top-Email{
