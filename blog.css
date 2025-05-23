@@ -228,24 +228,26 @@
 
 .header .header-mid{
     display: flex;
-    width: 100%;
+    align-items: center;
 }
 .header .header-mid-img{
+    display: flex;
+    align-items: center;
     width: 50%;
     height: 831px;
     background:  url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true") no-repeat ;
 }
 .header .header-img-left{
-    width: 100%;
+   
     height: 831px;
 }
 .header .header-mid-l{
+    width: 50%;
     
-    height: 814px;
 }
 
 .header .header-img-right-content{
-    padding: 300px 70px 300px 80px;
+    padding-left: 80px;
     color: #0027D5;
     
 }
