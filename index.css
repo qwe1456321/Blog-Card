@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+/* 設計稿都是固定字體 :
+優先搜索: Noto Sans TC 字體
+找到Google Fonts : 左上角的Fonts 裡面，第一行英文框 點入，右上角 有Get  font >> 引入的連結在 < > Get embed cold  
+進入後選 @import 
+引入的@import 外部資源，必須先放最上面。
+自己個人寫的樣式要寫在後面 */
+
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*, *::before, *::after{  box-sizing: border-box;   /*幫自己計算好寬高*/
+                          /* outline:solid 1px;  */
+                     }
+                     /*>> 查看圖線排版功能(需隱藏) 要看再打開即可 */
+
+
+img{ vertical-align : middle; /*>> 把圖片下面空白去除*/
+     width:100% ;             /*>> 強制內縮在 div的空間裡。*/
+     height : auto ; 
+     display: block; /* 把圖片變成區塊元素，清楚底部空隙 */
+     object-fit: cover; /* 讓圖片填滿父層 */ }        /*>> 圖片還是必須寫一下，避免突發狀況。*/
+
+a{
+    display: inline-block;
+}
+/*>> ( 加了inline 佔據空間不會那麼多，原本a标签行內元素只能左右padding 不能上下padding ，所以需要 inline - block ) */
+
+body{
+    font-family: "Noto Sans TC", sans-serif;
+    line-height :  1.5;  /* = 150%; ( 意思一樣，但是{倍數}比%數更穩定 )*/
+  }
+/* sans-serif; = 通用字體，必須複製到，因為他是次順位字體 */
+
+.container-father{
+    max-width : 1920px;
+    margin : 0 auto ;
+}
+.container { 
+       max-width: 1320px; 
+       padding: 0px 12px;
+       margin: 0 auto; } 
+
+       /* 查看設計稿 : 
+1.Guideline 計算格線 
+2. (找出設計稿最寬元素)
+3. 注意 :  最外圍不須作1920px 滿版設定
+
+*~ 以上是此設計稿任務的通用套入設定 ~ *  */
+
+
+/* ************************************************************** */
+
+
+.serch {
+    display: flex;
+    width: 416px;
+    height: 56px;
+    border: 1px solid #4B4B4B;
+    border-radius: 40px;
+    padding: 16px 48px 16px 16px;
+    margin-top: 80px;
+    
+}
+.serch  .serch-img{
+    width: 8%;
+    padding-top: 2px;
+    
+}
+.serch  .serch-a{
+    text-decoration: none;
+    color: #4B4B4B;
+    font-weight: 500;
+    font-size: 16px;
+    border: transparent;
+}
+.serch  .serch-a:hover{
+    color: blue;
+}
+
+.blog-father{
+    
+    display: flex;  /* 父元素，只需調整排版方向，或多於向下移動*/
+    flex-wrap: wrap;
+    margin: 40px 0px;
+    gap: 80px 24px;  /* 只針對卡片元素本身之間做間距空間 ，跟margin/ padding 不同，不會全部上下左右都給到值*/
+}                    /* (給總高 總寬即可)*/
+                     /* gap 會適用於 90% 大部分情況 */
+
+
+.blog-card{  /* 相當於 li 寬度設置 */ 
+    /* width: 416px; */
+    width: 30%;  /*三欄設計 30%*3=90%，不超過100%*/
+    
+}
+
+@media (max-width:992px) {
+    .container{
+        padding: 0 15px; /*( 上+下 ) = 0px ( 左+右 ) = 15px* 左右留白 才好看*/
+        
+    }
+    .blog-card{   /* li 欄位 觸發 991px 變2欄式*/
+        width: 48%;
+    }
+    .serch  .serch-a{
+        width: 50%;
+        font-size: 11px;
+
+    }
+    
+}
+@media (max-width:767px) {
+    .blog-card{
+        width: 100%;
+    }
+    .serch  .serch-a{
+        /* font-size: px; */
+        width: 100%;
+    }
+}
+
+
+.card-img{
+    margin-bottom: 16px;
+}
+
+.blog-card  .cart-time{
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+
+.blog-card  .hashtag{   /*人氣文章 與 文字 間距為8px*/
+    font-weight: 500;
+    font-size: 24px;
+    color: #0027D5;
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+.blog-card  .hashtag-good{
+    background-color: #0027D5;
+    color: #FFFFFF;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 16px;
+
+}
+.blog-card  .hashtag-good:hover{
+    background-color: red;
+    
+}
+
+.hashtag:hover{
+    color: rgb(230, 40, 243);
+}
+
+.blog-card  .cart-title{
+    font-weight: 700;
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.blog-card  .cart-text{
+    font-weight: 500;
+    font-size: 16px;
+    color: #4B4B4B;
+    /* ********小百寶袋，文字隱藏********* */
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2 ;  /*看你想剩下幾行，禁止用padding 不然會變很奇怪*/
+    overflow: hidden; 
+
+}
+.bnt{
+    padding: 8px 16px;
+    color: #4B4B4B;
+    font-weight: 500;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 40px;
+    text-decoration: none;
+    margin-top: 16px;
+}
+.bnt:hover{
+    color: white;
+    background-color: #000000;
+}
+.pages{
+     
+     margin-bottom: 88px;
+}
+.pages  .pages-mid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pages  .pages-ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 328px;
+}
+
+.pages  .pages-num-a{
+    width: 100%;
+    margin-right: 40px;
+    display: block;
+    height: 40px;
+    
+    text-align: center;
+    text-decoration: none;
+    padding-top: 7px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #0027D5;
+}
+.pages  .pages-num-a:hover{
+    color: #ee33c9;
+    font-size: 22px;
+}
+.pages  .pages-way-a{
+    width: 24px;
+    height: 24px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    color: #4B4B4B;
+}
+.pages  .pages-way-a:hover{
+    color: red;
+    font-size: 22px;
+}
+
+
+/* 表頭製作 *********************************** */
+.header{
+    margin: 0 auto;
+    /* max-width : 1920px; */
+    width: 100%;
+}
+/* .header-top{
+    margin: 24px 0px;
+} */
+.header-top-ul {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0px;
+}
+.header-top-ul  .top-ul-li {
+    justify-content: space-between;
+    
+}
+
+.header-top-ul  .top-a {
+    font-weight: 700;
+    font-size: 28px;
+    color: #000000;
+    text-decoration: none;
+    margin-right: 40px;
+    
+}
+
+.header-top-ul  .top-a:hover{
+    color: #ee33c9;
+}
+
+
+.header .header-mid{
+    display: flex;
+    width: 100%;
+}
+.header .header-mid-img{
+    width: 50%;
+    height: 831px;
+    background:  url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true") ;
+}
+.header .header-img-left{
+    width: 100%;
+    height: 831px;
+}
+.header .header-mid-l{
+    
+    height: 814px;
+}
+
+.header .header-img-right-content{
+    padding: 300px 70px 300px 80px;
+    color: #0027D5;
+    
+}
+
+
+.header-under{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 2px solid #6C757D;
+    height: auto;
+    
+}
+
+.header-mid  .header-mid-p{
+    
+    font-size: 28px;
+    font-weight: 700;
+    color: #0027D5;
+    
+}
+
+.header-mid  .header-mid-h1{
+    font-size: 120px;
+    font-weight: 900;
+    color: #0027D5;
+    /* font-family: jf-jinxuan; 引入字體?，查無此字體*/ 
+}
+.header-under .header-ud-img{
+    width: 100%;
+    
+}
+.header-under .header-ud-body{
+     width: 100%;
+     margin-left: 20px;
+     /* border: 1px solid black; */
+     display: flex;
+     align-items: center;
+    
+}
+.header-ud-body-son{
+    width: 100%;
+}  
+.header-under .header-ud-time{
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+.header-under .header-ud-a{
+    font-weight: 500;
+    font-size: 24px;
+    color: #0027D5;
+    text-decoration: none;
+    margin-right: 8px;
+}
+.header-under .header-ud-b{
+    background-color: #0027D5;
+    color: #FFFFFF;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 16px;
+}
+.header-under .header-ud-b:hover{
+    background-color: red;
+}
+.header-under .header-ud-h2{
+    font-weight: 700;
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+.header-under .header-ud-p{
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+    /* ********小百寶袋，文字隱藏********* */
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2 ;  /*看你想剩下幾行，禁止用padding 不然會變很奇怪*/
+    overflow: hidden; 
+    width: 70%;
+}
+
+
+
+@media (max-width:992px) {
+    .header{
+        padding: 0 15px; /*( 上+下 ) = 0px ( 左+右 ) = 15px* 左右留白 才好看*/
+    }
+   
+    .header .header-mid{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .header .header-mid-img{
+        text-align: center;
+        width: 100%;
+        height: 180px;
+
+    }
+    .header-ud-img{
+        width: 48%;
+    }
+    .header-ud-body{
+        width: 48%;
+    }
+    .header-mid  .header-mid-h1{
+        font-size: 52px;
+       
+    }
+    .header .header-mid-p{
+        font-size: 28px;
+    }
+    .header .header-img-right-content{
+        padding-left: 24px;
+        padding-top: 24px;
+        padding-right: 34px;
+        padding-bottom: 40px;
+    }
+    .header-under{
+        padding: 0px 15px;
+        border: none;
+    }
+   
+    
+}
+@media (max-width:767px) {
+    
+    .header .header-mid-l{
+        width: 100%;
+        height: 375px;
+    }
+    .header .header-img-left{
+        width: 100%;
+        height: 375px;
+    }
+    .header-ud-img{
+        width: 100%;
+        
+    }
+    .header-ud-body{
+        width: 100%;
+    }
+    .header-ud-body-son{
+        width: 100%;
+        margin-left: -10px;
+
+    }
+    
+    .header-under{
+        width: 100%;
+        flex-direction: column;
+        padding-bottom: 20px;
+        
+    }
+    
+    
+}
+
+/* 表尾 footer 製作 *********************************** */
+.footer{
+    /* margin: 0 auto; */
+    max-width: 1920px;
+    width: 100%;
+}
+.footer .footer-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 312px;
+    
+    width: 100%;
+}
+.footer .footer-top-Email{
+    
+    font-weight: 500;
+    font-size: 32px;
+    color: #000000;
+}
+
+.footer .footer-img-ul{
+    display: flex;
+    
+}
+.footer-under .footer-ud-year{
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    margin: 24px 0px;
+}
+@media (max-width:992px) {
+    
+    .footer .footer-top{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display:none;
+    }
+    /* .footer .footer-top-Email{
+       display:none; 
+    } */
+}
+@media (max-width:767px) {
+    .footer .footer-top{
+    width: 100%;
+   
+    padding-left: 200px;
+    padding-right: 200px;
+    
+
+    }
+    
+}
+/* ************************************************** Blog - 文章區 第三頁 ******************************************************* */
+
