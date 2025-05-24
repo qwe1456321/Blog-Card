@@ -165,7 +165,6 @@
     margin-right: 40px;
     display: block;
     height: 40px;
-    
     text-align: center;
     text-decoration: none;
     padding-top: 7px;
@@ -176,6 +175,9 @@
 .pages  .pages-num-a:hover{
     color: #ee33c9;
     font-size: 22px;
+    background-color: rgb(241, 242, 245);
+    border-radius: 50px;
+    padding: 2px;
 }
 .pages  .pages-way-a{
     width: 24px;
@@ -190,6 +192,8 @@
 .pages  .pages-way-a:hover{
     color: red;
     font-size: 22px;
+    background-color: rgb(229, 230, 233);
+    border-radius: 20px;
 }
 
 
@@ -283,14 +287,14 @@
         width: 100%;
     }
     .banner-content{
-        padding: 5px 50px 20px 50px;
+        padding: 60px 50px 60px 50px;
         margin: 0px;
     }
     .banner-content-name{
-        font-size: 40px;
+        font-size: 52px;
     }
     .banner-content-p{
-        font-size: 22px;
+        font-size: 28px;
     }
 }
 

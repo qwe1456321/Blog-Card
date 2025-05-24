@@ -15,6 +15,9 @@
 .header-top-a:hover{
     color: #ee33c9;
 }
+
+/* banner all  */
+
 .banner{
     width: 100%;
     display: flex;
@@ -54,29 +57,79 @@
     .banner-content-name{
     font-size: 50px;
     }
-}
-
-@media(max-width:767px){
-
     .banner{
-        display: flex;
-        flex-direction: column;
-        padding: 0px 15px;
+    padding: 0px 15px; 
+    display: flex;
+    flex-direction: column;
     }
-    .banner-title{
+    .banner-content{
+        padding: 250px 50px 150.5px 50px;
+        margin: 0px;
+    }
+    .banner-content-name{
+        font-size: 52px;
+        margin-top: -220px;
+        margin-left: 200px;
+    }
+    .banner-content-p{
+        font-size: 28px;
+        margin-left: 200px;
+    }
+     .banner-title{
         width: 100%; 
     }
     .banner-humen{
         width: 100%;
     }
-    .banner-content{
-        padding: 5px 50px 20px 50px;
-        margin: 0px;
+    .banner-self .banner-self-introduction{
+     width: 100%;
+     margin-left: 65px;
     }
+    .banner-self{
+    display: flex;
+    justify-content: start;
+    padding: 0px;
+}
+}
+
+@media(max-width:767px){
     .banner-content-name{
-        font-size: 40px;
+    font-size: 52px;
+    margin-top: -220px;
+    margin-left: 0px;
     }
     .banner-content-p{
-        font-size: 22px;
+    font-size: 28px;
+    margin-left: 0px;
     }
+ 
 }
+/* banner img - all  */
+
+.self-p{
+    font-weight: 500;
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 16px;
+}
+.self-sp{
+    font-weight: 500;
+    font-size: 28px;
+    color: #000000;
+}
+.self-img-ul{
+    display: flex;
+}
+.banner-self{
+    display: flex;
+    justify-content: end;
+    padding-right: 80px;
+}
+.banner-self-introduction{
+    width: 60%;
+    padding: 80px 40px;
+    margin-top: -150px;
+    background-color: #FFFFFF;
+    background-size: cover;
+}
+
