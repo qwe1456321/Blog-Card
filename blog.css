@@ -228,32 +228,19 @@
 
 .header .header-mid{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 .header .header-mid-img{    /*  IMG banner */
-    overflow-clip-margin: clip;
-    cverflow:clip;
-    width: 100%;
-    background-size: cover;
     display: flex;
     align-items: center;
-    /* width: 50%; */
-    height: 831px;
+    background-size: cover;
+    width: 50%;
+    
     background:  url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true") no-repeat ;
 }
 /*  IMG banner */
-.header .header-mid-l{  
-    overflow-clip-margin: clip;
-    cverflow:clip;
-    width: 100%;
-    
-}
-.header-img-left{
-    height: 831px;
-    overflow-clip-margin: clip;
-    cverflow:clip;
-    width: 100%;
-}
+
+
 
 .header .header-img-right-content{   /*  IMG banner word */
     padding-left: 80px;
@@ -353,7 +340,6 @@
    
     .header .header-mid{
         display: flex;
-       
         
     }
    
