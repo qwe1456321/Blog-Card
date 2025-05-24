@@ -225,27 +225,83 @@
     color: #ee33c9;
 }
 
-.header .header-mid{
-    display: flex;
-    /* align-items: center; */
-}
-.header .header-mid-img{    /*  IMG banner */
-    display: flex;
-    align-items: center;
-    background-size: cover;
-    width: 50%;
-    
-    background:  url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true") no-repeat ;
-}
 /*  IMG banner */
 
-
-
-.header .header-img-right-content{   /*  IMG banner word */
-    padding-left: 80px;
-    color: #0027D5;
-    
+.banner{
+    width: 100%;
+    display: flex;
 }
+.banner-humen{
+    width: 50%;
+}
+.banner-humen img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    background-size: cover;
+}
+.banner-title{
+    align-items: center;
+    display: flex;
+    width: 50%;
+    background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true")no-repeat;
+}
+.banner-content{
+    margin-left: 80px;
+}
+.banner-content-name{
+    font-size: 120px;
+    font-weight: 900;
+    color: #0027D5;
+}
+.banner-content-p{
+    font-size: 28px;
+    font-weight: 700;
+    color: #0027D5;
+}
+
+@media(max-width:992px){
+    .banner-content-name{
+    font-size: 50px;
+    }
+    .banner{
+    padding: 0px 15px;
+    }
+}
+
+@media(max-width:767px){
+
+    .banner{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .banner-title{
+        width: 100%; 
+    }
+    .banner-humen{
+        width: 100%;
+    }
+    .banner-content{
+        padding: 5px 50px 20px 50px;
+        margin: 0px;
+    }
+    .banner-content-name{
+        font-size: 40px;
+    }
+    .banner-content-p{
+        font-size: 22px;
+    }
+}
+
+
+
+
+
+
+
+
+/*  IMG banner */
 
 
 .header-under{
@@ -257,20 +313,10 @@
     
 }
 
-.header-mid  .header-mid-p{
-    
-    font-size: 28px;
-    font-weight: 700;
-    color: #0027D5;
-    
-}
 
-.header-mid  .header-mid-h1{
-    font-size: 120px;
-    font-weight: 900;
-    color: #0027D5;
-    /* font-family: jf-jinxuan; 引入字體?，查無此字體*/ 
-}
+
+
+
 .header-under .header-ud-img{
     width: 100%;
     
@@ -333,15 +379,6 @@
 
 
 @media (max-width:992px) {
-    .header{
-        padding: 0 15px; /*( 上+下 ) = 0px ( 左+右 ) = 15px* 左右留白 才好看*/
-    }
-   
-    .header .header-mid{
-        display: flex;
-        
-    }
-   
    
     .header-ud-img{
         width: 48%;
@@ -349,19 +386,8 @@
     .header-ud-body{
         width: 48%;
     }
-    .header-mid  .header-mid-h1{
-        font-size: 52px;
-       
-    }
-    .header .header-mid-p{
-        font-size: 28px;
-    }
-    .header .header-img-right-content{
-        padding-left: 24px;
-        padding-top: 24px;
-        padding-right: 34px;
-        padding-bottom: 40px;
-    }
+   
+
     .header-under{
         padding: 0px 15px;
         border: none;
@@ -376,17 +402,8 @@
         width: 100%;
         height: 375px;
     }
-    .header .header-mid-img{
-        width: 100%;
-        height: 375px;
     
-    }
-    .header  .header-mid-h1{
-        font-size: 26px;
-    }
-    .header .header-mid-p{
-        font-size: 16px;
-    }
+    
     .header-ud-img{
         width: 100%;
         

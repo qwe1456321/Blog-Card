@@ -1,0 +1,82 @@
+.header-top{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 24px 0px;
+}
+
+.header-top-a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 28px;
+    color: #000000;
+    margin-left: 40px;
+}
+.header-top-a:hover{
+    color: #ee33c9;
+}
+.banner{
+    width: 100%;
+    display: flex;
+}
+.banner-humen{
+    width: 50%;
+}
+.banner-humen img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    background-size: cover;
+}
+.banner-title{
+    align-items: center;
+    display: flex;
+    width: 50%;
+    /* height: 834px; */
+    /* background: url(./images/index/a1.png); */
+    background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true")no-repeat;
+}
+.banner-content{
+    margin-left: 80px;
+}
+.banner-content-name{
+    font-size: 120px;
+    font-weight: 900;
+    color: #0027D5;
+}
+.banner-content-p{
+    font-size: 28px;
+    font-weight: 700;
+    color: #0027D5;
+}
+
+@media(max-width:992px){
+    .banner-content-name{
+    font-size: 50px;
+    }
+}
+
+@media(max-width:767px){
+
+    .banner{
+        display: flex;
+        flex-direction: column;
+        padding: 0px 15px;
+    }
+    .banner-title{
+        width: 100%; 
+    }
+    .banner-humen{
+        width: 100%;
+    }
+    .banner-content{
+        padding: 5px 50px 20px 50px;
+        margin: 0px;
+    }
+    .banner-content-name{
+        font-size: 40px;
+    }
+    .banner-content-p{
+        font-size: 22px;
+    }
+}
