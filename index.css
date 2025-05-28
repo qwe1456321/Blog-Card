@@ -111,6 +111,7 @@
     font-size: 28px;
     color: #000000;
     margin-bottom: 16px;
+    margin-top: 8px;
 }
 .self-sp{
     font-weight: 500;
@@ -133,3 +134,324 @@
     background-size: cover;
 }
 
+/* 專業服務與方案  */
+.function{
+    max-width: 1320px;
+    padding: 0px 12px;
+    margin: 0 auto;
+}
+.article-img{
+    width: 60%;
+}
+.article-li img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.container-main{
+    margin-bottom: 32px;
+}
+.main-h2{
+    font-weight: 700;
+    font-size: 64px;
+    color: #000000;
+}
+.three-h3{
+    font-weight: 700;
+    font-size: 28px;
+    color: #000000;
+}
+.content-gray-p{
+    margin-top: 8px;
+}
+.article-li{
+    padding: 0px 110px;
+    display: flex;
+    margin-bottom: 64px;
+    width: 100%;
+}
+.dash{
+    color: #0027D5;
+    width: 30px;
+    border: 1.25px solid #0027D5;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+.content{
+    background-color: #FFFFFF;
+    padding: 24px;
+    width: 50%;
+    height: 210px;
+    margin: 55px 0px;
+    margin-left: -40px;
+    background-size: cover;
+    
+}
+.article-li-two{
+    padding: 0px 110px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 64px;
+    
+    
+}
+.content-two{
+    background-color: #FFFFFF;
+    padding: 24px;
+    width: 50%;
+    height: 210px;
+    margin: 55px 0px;
+    margin-right: -40px;
+    background-size: cover;
+    object-fit: cover;
+    z-index:10; /* 背景覆蓋的作用*/
+    
+}
+.container-footer{
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    margin-top: -32px;
+    margin-bottom: 80px;
+    
+}
+.footer-main-h2{
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000;
+}
+.right-img{
+    width: 40px;
+    height: 40px;
+    
+}
+.right-img:hover{
+    background-color: rgb(252, 191, 239);
+    border-radius: 40px;
+    
+}
+
+@media(max-width:992px){
+
+.container-main{
+    margin-bottom: 32px;
+}
+.main-h2{
+    font-size: 48px;
+}
+
+.article-li{
+    padding: 0px 12px;
+    display: flex;
+    margin-bottom: -64px;
+    flex-direction: column;
+}
+.dash{
+    color: #0027D5;
+    width: 30px;
+    border: 1.25px solid #0027D5;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-top: -20px;
+}
+.content{
+    background-color: #FFFFFF;
+    padding: 0px 24px;
+    margin-top: 64px;
+    margin-left: 0px;
+    width: 100%;
+    background-size: cover;
+    
+}
+.article-li-two{
+    padding: 0px 12px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-direction: column;
+    margin-bottom: -64px;
+    
+    
+}
+.content-two{
+    background-color: #FFFFFF;
+    padding: 0px 24px;
+    width: 100%;
+    margin-top: 64px;
+    margin-right: 0px;
+    background-size: cover;
+    object-fit: cover;
+    z-index:10; /* 背景覆蓋的作用*/
+    
+}
+.container-footer{
+    margin-right: 0px;
+    margin-bottom: 32px;
+    margin-top: -64px;
+}
+
+}
+
+/* 部落格精選   */
+
+.blog-special{
+    
+    width: 100%;
+    border-bottom: 1px solid #6C757D;
+    border-top: 1px solid #6c757D;
+    
+}
+.blog-indent{
+    max-width: 1320px;
+    padding: 0px 12px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.blog-main{
+    margin: 0px 0px 24px 8px; 
+}
+.blog-sp-content{
+    display: flex;
+    align-items: center;
+}
+.blog-sp-content ul{
+    padding: 0px 68px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.blog-sp-content-li{
+    margin-right: 24px;
+
+}
+.img-top{
+    margin-bottom: 16px;
+}
+.blog-sp-content img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+.blog-under{
+    width: 416px;
+}
+time{
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 4px;
+}
+.hashtag-a{
+    font-weight: 500;
+    font-size: 24px;
+    color: #0027D5;
+    margin-right: 8px;
+    text-decoration: none;
+    
+}
+.hashtag-a:hover{
+    color: rgb(230, 40, 243);
+}
+.hashtag-new{
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+    padding: 6px 12px;
+    background-color: #0027D5;
+    border-radius: 40px;
+    text-decoration: none;
+    text-align: center;
+}
+.hashtag-new:hover{
+    background-color: red;
+}
+.blog-p{
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2 ;  /*看你想剩下幾行，禁止用padding 不然會變很奇怪*/
+    overflow: hidden; 
+}
+.bnt{
+    font-size: 16px;
+    font-weight: 500;
+    color: #4B4B4B;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #000000;
+    border-radius: 40px;
+    margin-top: 16px;
+}
+.bnt:hover{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/* 部落格精選 (按鈕)  */
+
+
+.blog-action{
+    display: flex;
+    justify-content: space-between;
+    
+    background-color: #2df34e;
+}
+
+.blog-action svg:hover{
+    background-color: #2df34e;
+    border-radius: 40px;
+}
+
+@media(max-width:992px){
+    
+
+.blog-indent{
+    max-width: 100%;
+    padding: 0px 12px;
+    margin: 0 auto;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-sp-content ul{
+    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border :1px solid blue
+    
+}
+.blog-sp-content-li{
+    margin-right: 0px;
+    margin-bottom: 32px;
+
+}
+.img-top{
+    margin-bottom: 16px;
+}
+.blog-sp-content img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+.blog-under{
+    width: 100%;
+}
+
+
+/* 部落格精選 (按鈕)  */
+
+
+svg:hover{
+    background-color: #2df34e;
+    border-radius: 40px;
+}
+}

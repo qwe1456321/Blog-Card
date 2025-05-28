@@ -235,6 +235,11 @@
 .contract-a{
     font-size: 16;
     font-weight: 500;
+    color: #0027D5;
+}
+.contract-a:hover{
+    font-size: 18px;
+    color: red;
 }
 
 .first-act-graybg-end{
