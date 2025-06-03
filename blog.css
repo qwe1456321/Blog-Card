@@ -202,6 +202,7 @@
     margin: 0 auto;
     /* max-width : 1920px; */
     width: 100%;
+    
 }
 /* .header-top{
     margin: 24px 0px;
@@ -210,6 +211,7 @@
     display: flex;
     justify-content: center;
     margin: 24px 0px;
+    gap: 40px;
 }
 .header-top-ul  .top-ul-li {
     justify-content: space-between;
@@ -221,7 +223,7 @@
     font-size: 28px;
     color: #000000;
     text-decoration: none;
-    margin-right: 40px;
+    /* margin-right: 40px; */
     
 }
 
@@ -268,9 +270,7 @@
     .banner-content-name{
     font-size: 50px;
     }
-    .banner{
-    padding: 0px 15px;
-    }
+
 }
 
 @media(max-width:767px){
@@ -446,10 +446,13 @@
     width: 100%;
 }
 .footer .footer-top-Email{
-    
+    text-decoration: none;
     font-weight: 500;
     font-size: 32px;
     color: #000000;
+}
+.footer .footer-top-Email:hover{
+    color: #0027D5;
 }
 
 .footer .footer-img-ul{

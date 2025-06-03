@@ -12,7 +12,7 @@
 .header-article {
     display: flex;
     justify-content: center;
-    
+    gap: 40px;
 }
 .header-article-li{
     display: block;
@@ -22,7 +22,6 @@
     font-size: 28px;
     font-weight: 700;
     color: #000000;
-    margin-left: 40px;
     text-decoration: none;
 }
 .article-a:hover{
@@ -345,10 +344,13 @@
     width: 100%;
 }
 .footer .footer-top-Email{
-    
+    text-decoration: none;
     font-weight: 500;
     font-size: 32px;
     color: #000000;
+}
+.footer .footer-top-Email:hover{
+    color: #0027D5;
 }
 
 .footer .footer-img-ul{
